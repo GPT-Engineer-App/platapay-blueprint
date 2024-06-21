@@ -5,6 +5,7 @@ import IntegrationManagement from "./pages/IntegrationManagement.jsx";
 import SystemMonitoring from "./pages/SystemMonitoring.jsx";
 import Reporting from "./pages/Reporting.jsx";
 import Navbar from "./components/Navbar.jsx";
+import AdminPanel from "./pages/AdminPanel.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/integration-management" element={<IntegrationManagement />} />
         <Route exact path="/system-monitoring" element={<SystemMonitoring />} />
         <Route exact path="/reporting" element={<Reporting />} />
+        <Route exact path="/admin-panel" element={<AdminPanel />} />
       </Routes>
     </Router>
   );
