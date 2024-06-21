@@ -23,6 +23,9 @@ const Navbar = () => {
         <li>
           <Link to="/manager-dashboard" className="text-white">Manager Dashboard</Link>
         </li>
+        <li>
+          <Link to="/cashier-pos" className="text-white">Cashier POS</Link>
+        </li>
       </ul>
     </nav>
   );
