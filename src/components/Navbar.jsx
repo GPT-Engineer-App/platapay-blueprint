@@ -20,6 +20,9 @@ const Navbar = () => {
         <li>
           <Link to="/reporting" className="text-white">Reporting</Link>
         </li>
+        <li>
+          <Link to="/manager-dashboard" className="text-white">Manager Dashboard</Link>
+        </li>
       </ul>
     </nav>
   );
