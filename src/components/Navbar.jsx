@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Bell, User } from 'lucide-react';
 
-const Navbar = () => {
+const Navbar = ({ pageTitle }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -10,12 +10,21 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-gray-800 p-4 fixed top-0 left-0 right-0 z-50">
+    <header className="bg-purple-600 p-4 fixed top-0 left-0 right-0 z-50">
       <div className="flex items-center justify-between">
-        <h1 className="text-white text-2xl">Platapay Super Admin Panel</h1>
-        <button onClick={toggleMenu} className="text-white focus:outline-none md:hidden">
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="flex items-center">
+          <button onClick={toggleMenu} className="text-white focus:outline-none md:hidden">
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+          <div className="ml-4">
+            <div className="text-white text-2xl">PlataPay</div>
+            <div className="text-white text-sm">{pageTitle}</div>
+          </div>
+        </div>
+        <div className="flex items-center space-x-4">
+          <Bell className="text-white h-6 w-6" />
+          <User className="text-white h-6 w-6" />
+        </div>
       </div>
       <nav className={`md:flex md:items-center md:justify-between ${isOpen ? 'block' : 'hidden'} md:block`}>
         <ul className="md:flex md:space-x-4">
