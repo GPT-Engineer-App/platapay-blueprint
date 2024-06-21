@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { User, Package, Integration, Monitor, FileText, Dashboard, QrCode, ShoppingCart, Wallet, Truck, CreditCard, List, DollarSign } from 'lucide-react';
+import { User, Package, Link2, Monitor, FileText, Dashboard, QrCode, ShoppingCart, Wallet, Truck, CreditCard, List, DollarSign } from 'lucide-react';
 
 const Index = () => {
   const navItems = [
     { path: '/user-management', icon: <User className="h-6 w-6" />, label: 'User Management' },
     { path: '/product-management', icon: <Package className="h-6 w-6" />, label: 'Product Management' },
-    { path: '/integration-management', icon: <Integration className="h-6 w-6" />, label: 'Integration Management' },
+    { path: '/integration-management', icon: <Link2 className="h-6 w-6" />, label: 'Integration Management' },
     { path: '/system-monitoring', icon: <Monitor className="h-6 w-6" />, label: 'System Monitoring' },
     { path: '/reporting', icon: <FileText className="h-6 w-6" />, label: 'Reporting' },
     { path: '/manager-dashboard', icon: <Dashboard className="h-6 w-6" />, label: 'Manager Dashboard' },
