@@ -12,6 +12,9 @@ const Navbar = () => {
           <Link to="/user-management" className="text-white">User Management</Link>
         </li>
         <li>
+          <Link to="/product-management" className="text-white">Product Management</Link>
+        </li>
+        <li>
           <Link to="/integration-management" className="text-white">Integration Management</Link>
         </li>
         <li>
@@ -24,7 +27,13 @@ const Navbar = () => {
           <Link to="/manager-dashboard" className="text-white">Manager Dashboard</Link>
         </li>
         <li>
+          <Link to="/qr-code-payments" className="text-white">QR Code Payments</Link>
+        </li>
+        <li>
           <Link to="/cashier-pos" className="text-white">Cashier POS</Link>
+        </li>
+        <li>
+          <Link to="/user-account-management" className="text-white">User Account Management</Link>
         </li>
       </ul>
     </nav>
