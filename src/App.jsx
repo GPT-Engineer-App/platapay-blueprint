@@ -11,6 +11,7 @@ import CashierPOS from "./pages/CashierPOS.jsx";
 import ProductManagement from "./pages/ProductManagement.jsx";
 import QRCodePayments from "./pages/QRCodePayments.jsx";
 import UserAccountManagement from "./pages/UserAccountManagement.jsx";
+import RiderApplication from "./pages/RiderApplication.jsx";
 
 function App() {
   return (
@@ -25,9 +26,10 @@ function App() {
         <Route exact path="/admin-panel" element={<AdminPanel />} />
         <Route exact path="/manager-dashboard" element={<ManagerDashboard />} />
         <Route exact path="/cashier-pos" element={<CashierPOS />} />
-      <Route exact path="/product-management" element={<ProductManagement />} />
+        <Route exact path="/product-management" element={<ProductManagement />} />
         <Route exact path="/qr-code-payments" element={<QRCodePayments />} />
         <Route exact path="/user-account-management" element={<UserAccountManagement />} />
+        <Route exact path="/rider-application" element={<RiderApplication />} />
       </Routes>
     </Router>
   );
