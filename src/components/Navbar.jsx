@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Bell, User } from 'lucide-react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
 
 const Navbar = ({ pageTitle }) => {
@@ -9,6 +9,10 @@ const Navbar = ({ pageTitle }) => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -24,38 +28,30 @@ const Navbar = ({ pageTitle }) => {
           </div>
         </div>
         <div className="flex items-center space-x-4">
-          <Dialog>
-            <DialogTrigger asChild>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
               <Bell className="text-white h-6 w-6 cursor-pointer" />
-            </DialogTrigger>
-            <DialogContent>
-              <DialogHeader>
-                <DialogTitle>Notifications</DialogTitle>
-              </DialogHeader>
-              <div className="p-4">
-                <p>Sample Notification: Your transaction was successful.</p>
-              </div>
-            </DialogContent>
-          </Dialog>
-          <Dialog>
-            <DialogTrigger asChild>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>Sample Notification: Your transaction was successful.</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
               <User className="text-white h-6 w-6 cursor-pointer" />
-            </DialogTrigger>
-            <DialogContent>
-              <DialogHeader>
-                <DialogTitle>Profile</DialogTitle>
-              </DialogHeader>
-              <div className="p-4">
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>
                 <img src="https://via.placeholder.com/50" alt="Profile" className="rounded-full mb-4" />
                 <p>Super Admin: Boss Marc</p>
                 <Button variant="outline" className="mt-4">Log In/Out</Button>
-              </div>
-            </DialogContent>
-          </Dialog>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
       <nav className={`md:flex md:items-center md:justify-between ${isOpen ? 'block' : 'hidden'} md:block`}>
-        <ul className="md:flex md:space-x-4">
+        <ul className="md:flex md:space-x-4" onClick={closeMenu}>
           <li><Link to="/" className="text-white block py-2 px-4">Home</Link></li>
           <li><Link to="/user-management" className="text-white block py-2 px-4">User Management</Link></li>
           <li><Link to="/product-management" className="text-white block py-2 px-4">Product Management</Link></li>
