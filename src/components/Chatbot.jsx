@@ -55,7 +55,7 @@ const Chatbot = () => {
       </button>
       {isOpen && (
         <div
-          className="fixed bottom-32 right-4 bg-white border border-gray-300 rounded-lg shadow-lg w-80 h-96 z-50"
+          className="fixed bottom-32 right-4 bg-white border border-gray-300 rounded-lg shadow-lg w-80 h-96 z-50 chatbot-container"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex justify-between items-center p-2 border-b border-gray-300">
