@@ -20,7 +20,7 @@ import FundTransfers from "./pages/FundTransfers.jsx";
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Navbar pageTitle="Home" />
       <Routes>
         <Route exact path="/" element={<Index />} />
         <Route exact path="/user-management" element={<UserManagement />} />
