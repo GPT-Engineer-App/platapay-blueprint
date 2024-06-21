@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Home, User, Settings, Info } from 'lucide-react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { useTheme } from 'next-themes';
+import Chatbot from './Chatbot';
 
 const Footer = () => {
   const { theme, setTheme } = useTheme();
@@ -33,6 +34,7 @@ const Footer = () => {
           <span>About</span>
         </Link>
       </div>
+    <Chatbot />
     </footer>
   );
 };
