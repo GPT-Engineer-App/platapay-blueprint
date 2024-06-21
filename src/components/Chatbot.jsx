@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Bot } from 'lucide-react'; // Import the AI icon
 import ChatBot from 'react-simple-chatbot';
 import axios from 'axios';
 import { X } from 'lucide-react';
@@ -47,28 +48,10 @@ const Chatbot = () => {
   return (
     <div className="relative">
       <button
-        className="fixed bottom-20 right-4 bg-purple-600 text-white p-2 rounded-full shadow-lg z-50"
+        className="fixed bottom-20 right-4 bg-purple-600 text-white p-4 rounded-full shadow-lg z-50" // Increased padding for bigger size
         onClick={toggleChatbot}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 20.25c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M8.25 9.75h7.5m-7.5 4.5h4.5"
-          />
-        </svg>
+        <Bot className="w-8 h-8" /> // Use the AI icon with increased size
       </button>
       {isOpen && (
         <div
