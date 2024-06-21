@@ -21,7 +21,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div className="min-h-screen bg-gray-100 pt-16 pb-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
         {navItems.map((item, index) => (
           <Link to={item.path} key={index}>
