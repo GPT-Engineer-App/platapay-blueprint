@@ -7,6 +7,7 @@ import Reporting from "./pages/Reporting.jsx";
 import Navbar from "./components/Navbar.jsx";
 import AdminPanel from "./pages/AdminPanel.jsx";
 import ManagerDashboard from "./pages/ManagerDashboard.jsx";
+import CashierPOS from "./pages/CashierPOS.jsx";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/reporting" element={<Reporting />} />
         <Route exact path="/admin-panel" element={<AdminPanel />} />
         <Route exact path="/manager-dashboard" element={<ManagerDashboard />} />
+        <Route exact path="/cashier-pos" element={<CashierPOS />} />
       </Routes>
     </Router>
   );
