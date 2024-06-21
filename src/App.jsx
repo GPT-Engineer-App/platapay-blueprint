@@ -1,5 +1,5 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { applyHelmet } from './middleware/helmet';
+
 import { ThemeProvider } from 'next-themes';
 import Index from "./pages/Index.jsx";
 import UserManagement from "./pages/UserManagement.jsx";
@@ -19,7 +19,7 @@ import EWalletManagement from "./pages/EWalletManagement.jsx";
 import Ordering from "./pages/Ordering.jsx";
 import FundTransfers from "./pages/FundTransfers.jsx";
 
-applyHelmet(App);
+
 
 function App() {
   return (
