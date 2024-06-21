@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Bell, User } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
 
 const Navbar = ({ pageTitle }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,8 +24,34 @@ const Navbar = ({ pageTitle }) => {
           </div>
         </div>
         <div className="flex items-center space-x-4">
-          <Bell className="text-white h-6 w-6" />
-          <User className="text-white h-6 w-6" />
+          <Dialog>
+            <DialogTrigger asChild>
+              <Bell className="text-white h-6 w-6 cursor-pointer" />
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>Notifications</DialogTitle>
+              </DialogHeader>
+              <div className="p-4">
+                <p>Sample Notification: Your transaction was successful.</p>
+              </div>
+            </DialogContent>
+          </Dialog>
+          <Dialog>
+            <DialogTrigger asChild>
+              <User className="text-white h-6 w-6 cursor-pointer" />
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>Profile</DialogTitle>
+              </DialogHeader>
+              <div className="p-4">
+                <img src="https://via.placeholder.com/50" alt="Profile" className="rounded-full mb-4" />
+                <p>Super Admin: Boss Marc</p>
+                <Button variant="outline" className="mt-4">Log In/Out</Button>
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
       <nav className={`md:flex md:items-center md:justify-between ${isOpen ? 'block' : 'hidden'} md:block`}>
