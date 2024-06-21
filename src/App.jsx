@@ -5,6 +5,7 @@ import IntegrationManagement from "./pages/IntegrationManagement.jsx";
 import SystemMonitoring from "./pages/SystemMonitoring.jsx";
 import Reporting from "./pages/Reporting.jsx";
 import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
 import AdminPanel from "./pages/AdminPanel.jsx";
 import ManagerDashboard from "./pages/ManagerDashboard.jsx";
 import CashierPOS from "./pages/CashierPOS.jsx";
@@ -37,6 +38,7 @@ function App() {
         <Route exact path="/ordering" element={<Ordering />} />
         <Route exact path="/fund-transfers" element={<FundTransfers />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
