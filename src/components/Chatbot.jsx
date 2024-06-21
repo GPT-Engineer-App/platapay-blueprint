@@ -59,7 +59,7 @@ const Chatbot = () => {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex justify-between items-center p-2 border-b border-gray-300">
-            <h2 className="text-lg font-semibold">Chatbot</h2>
+            <h2 className="text-lg font-semibold">Platapay Support</h2>
             <button onClick={closeChatbot}>
               <X className="w-6 h-6 text-gray-600" />
             </button>
