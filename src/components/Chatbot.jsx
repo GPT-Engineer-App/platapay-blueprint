@@ -51,7 +51,7 @@ const Chatbot = () => {
         className="fixed bottom-20 right-4 bg-purple-600 text-white p-4 rounded-full shadow-lg z-50" // Increased padding for bigger size
         onClick={toggleChatbot}
       >
-        <Bot className="w-8 h-8" /> // Use the AI icon with increased size
+        <Bot className="w-8 h-8" /> {/* Use the AI icon with increased size */}
       </button>
       {isOpen && (
         <div
