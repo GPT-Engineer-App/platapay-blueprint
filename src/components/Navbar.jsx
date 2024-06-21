@@ -35,6 +35,9 @@ const Navbar = () => {
         <li>
           <Link to="/user-account-management" className="text-white">User Account Management</Link>
         </li>
+        <li>
+          <Link to="/rider-application" className="text-white">Rider Application</Link>
+        </li>
       </ul>
     </nav>
   );
