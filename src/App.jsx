@@ -12,6 +12,9 @@ import ProductManagement from "./pages/ProductManagement.jsx";
 import QRCodePayments from "./pages/QRCodePayments.jsx";
 import UserAccountManagement from "./pages/UserAccountManagement.jsx";
 import RiderApplication from "./pages/RiderApplication.jsx";
+import EWalletManagement from "./pages/EWalletManagement.jsx";
+import Ordering from "./pages/Ordering.jsx";
+import FundTransfers from "./pages/FundTransfers.jsx";
 
 function App() {
   return (
@@ -30,6 +33,9 @@ function App() {
         <Route exact path="/qr-code-payments" element={<QRCodePayments />} />
         <Route exact path="/user-account-management" element={<UserAccountManagement />} />
         <Route exact path="/rider-application" element={<RiderApplication />} />
+        <Route exact path="/e-wallet-management" element={<EWalletManagement />} />
+        <Route exact path="/ordering" element={<Ordering />} />
+        <Route exact path="/fund-transfers" element={<FundTransfers />} />
       </Routes>
     </Router>
   );

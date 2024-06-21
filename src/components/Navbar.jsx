@@ -38,6 +38,15 @@ const Navbar = () => {
         <li>
           <Link to="/rider-application" className="text-white">Rider Application</Link>
         </li>
+        <li>
+          <Link to="/e-wallet-management" className="text-white">E-Wallet Management</Link>
+        </li>
+        <li>
+          <Link to="/ordering" className="text-white">Ordering</Link>
+        </li>
+        <li>
+          <Link to="/fund-transfers" className="text-white">Fund Transfers</Link>
+        </li>
       </ul>
     </nav>
   );
