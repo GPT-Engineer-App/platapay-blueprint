@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { User, Package, Link2, Monitor, FileText, Dashboard, QrCode, ShoppingCart, Wallet, Truck, CreditCard, List, DollarSign } from 'lucide-react';
+import { User, Package, Link2, Monitor, FileText, LayoutDashboard, QrCode, ShoppingCart, Wallet, Truck, CreditCard, List, DollarSign } from 'lucide-react';
 
 const Index = () => {
   const navItems = [
@@ -10,7 +10,7 @@ const Index = () => {
     { path: '/integration-management', icon: <Link2 className="h-6 w-6" />, label: 'Integration Management' },
     { path: '/system-monitoring', icon: <Monitor className="h-6 w-6" />, label: 'System Monitoring' },
     { path: '/reporting', icon: <FileText className="h-6 w-6" />, label: 'Reporting' },
-    { path: '/manager-dashboard', icon: <Dashboard className="h-6 w-6" />, label: 'Manager Dashboard' },
+    { path: '/manager-dashboard', icon: <LayoutDashboard className="h-6 w-6" />, label: 'Manager Dashboard' },
     { path: '/qr-code-payments', icon: <QrCode className="h-6 w-6" />, label: 'QR Code Payments' },
     { path: '/cashier-pos', icon: <ShoppingCart className="h-6 w-6" />, label: 'Cashier POS' },
     { path: '/user-account-management', icon: <Wallet className="h-6 w-6" />, label: 'User Account Management' },
