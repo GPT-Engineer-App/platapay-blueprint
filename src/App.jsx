@@ -6,6 +6,7 @@ import SystemMonitoring from "./pages/SystemMonitoring.jsx";
 import Reporting from "./pages/Reporting.jsx";
 import Navbar from "./components/Navbar.jsx";
 import AdminPanel from "./pages/AdminPanel.jsx";
+import ManagerDashboard from "./pages/ManagerDashboard.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/system-monitoring" element={<SystemMonitoring />} />
         <Route exact path="/reporting" element={<Reporting />} />
         <Route exact path="/admin-panel" element={<AdminPanel />} />
+        <Route exact path="/manager-dashboard" element={<ManagerDashboard />} />
       </Routes>
     </Router>
   );
