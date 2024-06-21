@@ -47,7 +47,7 @@ const Chatbot = () => {
   return (
     <div className="relative">
       <button
-        className="fixed bottom-4 right-4 bg-purple-600 text-white p-2 rounded-full shadow-lg"
+        className="fixed bottom-20 right-4 bg-purple-600 text-white p-2 rounded-full shadow-lg z-50"
         onClick={toggleChatbot}
       >
         <svg
@@ -72,7 +72,7 @@ const Chatbot = () => {
       </button>
       {isOpen && (
         <div
-          className="fixed bottom-16 right-4 bg-white border border-gray-300 rounded-lg shadow-lg w-80 h-96"
+          className="fixed bottom-32 right-4 bg-white border border-gray-300 rounded-lg shadow-lg w-80 h-96 z-50"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex justify-between items-center p-2 border-b border-gray-300">
