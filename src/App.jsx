@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import { ThemeProvider } from 'next-themes';
+import Chatbot from "./components/Chatbot";
 import Index from "./pages/Index.jsx";
 import UserManagement from "./pages/UserManagement.jsx";
 import IntegrationManagement from "./pages/IntegrationManagement.jsx";
@@ -24,6 +25,7 @@ import FundTransfers from "./pages/FundTransfers.jsx";
 function App() {
   return (
     <ThemeProvider attribute="class">
+      <Chatbot />
       <Router>
         <Navbar pageTitle="Home" />
         <Routes>
