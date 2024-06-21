@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Modal, ModalContent, ModalHeader, ModalFooter, ModalTitle, ModalDescription, ModalTrigger } from '@/components/ui/modal';
+
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';
 import { toast } from 'sonner';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator, BreadcrumbPage } from '@/components/ui/breadcrumb';
@@ -82,38 +82,35 @@ const UserManagement = () => {
           onChange={handleSearch}
           className="mr-2"
         />
-        <Modal>
-          <ModalTrigger asChild>
-            <Button onClick={() => setIsModalOpen(true)}>Add User</Button>
-          </ModalTrigger>
-          <ModalContent>
-            <ModalHeader>
-              <ModalTitle>{newUser.name ? 'Edit User' : 'Add User'}</ModalTitle>
-              <ModalDescription>
-                {newUser.name ? 'Edit the details of the user.' : 'Enter the details of the new user.'}
-              </ModalDescription>
-            </ModalHeader>
-            <div className="mb-4">
-              <Input
-                placeholder="User Name"
-                value={newUser.name}
-                onChange={(e) => setNewUser({ ...newUser, name: e.target.value })}
-                className="mr-2"
-              />
-              <Input
-                placeholder="User Email"
-                value={newUser.email}
-                onChange={(e) => setNewUser({ ...newUser, email: e.target.value })}
-                className="mr-2"
-              />
+        <Button onClick={() => setIsModalOpen(true)}>Add User</Button>
+        {isModalOpen && (
+          <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="bg-white p-4 rounded shadow-lg">
+              <h2 className="text-xl font-bold mb-2">{newUser.name ? 'Edit User' : 'Add User'}</h2>
+              <p className="mb-4">{newUser.name ? 'Edit the details of the user.' : 'Enter the details of the new user.'}</p>
+              <div className="mb-4">
+                <Input
+                  placeholder="User Name"
+                  value={newUser.name}
+                  onChange={(e) => setNewUser({ ...newUser, name: e.target.value })}
+                  className="mr-2"
+                />
+                <Input
+                  placeholder="User Email"
+                  value={newUser.email}
+                  onChange={(e) => setNewUser({ ...newUser, email: e.target.value })}
+                  className="mr-2"
+                />
+              </div>
+              <div className="flex justify-end">
+                <Button onClick={() => setIsModalOpen(false)} className="mr-2">Cancel</Button>
+                <Button onClick={newUser.name ? handleEditUser : handleAddUser}>
+                  {newUser.name ? 'Save Changes' : 'Add User'}
+                </Button>
+              </div>
             </div>
-            <ModalFooter>
-              <Button onClick={newUser.name ? handleEditUser : handleAddUser}>
-                {newUser.name ? 'Save Changes' : 'Add User'}
-              </Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
+          </div>
+        )}
       </div>
       <Table>
         <TableHeader>
