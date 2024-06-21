@@ -1,5 +1,4 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { apiLimiter } from './middleware/rateLimiter';
 import { applyHelmet } from './middleware/helmet';
 import { ThemeProvider } from 'next-themes';
 import Index from "./pages/Index.jsx";
