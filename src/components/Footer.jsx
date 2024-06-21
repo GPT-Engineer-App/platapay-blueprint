@@ -9,18 +9,18 @@ const Footer = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <footer className="bg-purple-600 p-4 fixed bottom-0 left-0 right-0 z-50">
+    <footer className="bg-primary p-4 fixed bottom-0 left-0 right-0 z-50">
       <div className="flex justify-around">
-        <Link to="/" className="text-white flex flex-col items-center">
+        <Link to="/" className="text-primary-foreground flex flex-col items-center">
           <Home className="h-6 w-6" />
           <span>Home</span>
         </Link>
-        <Link to="/user-management" className="text-white flex flex-col items-center">
+        <Link to="/user-management" className="text-primary-foreground flex flex-col items-center">
           <User className="h-6 w-6" />
           <span>Users</span>
         </Link>
         <DropdownMenu>
-          <DropdownMenuTrigger className="text-white flex flex-col items-center">
+          <DropdownMenuTrigger className="text-primary-foreground flex flex-col items-center">
             <Settings className="h-6 w-6" />
             <span>Settings</span>
           </DropdownMenuTrigger>
@@ -29,7 +29,7 @@ const Footer = () => {
             <DropdownMenuItem onClick={() => setTheme('dark')}>Dark Theme</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-        <Link to="/about" className="text-white flex flex-col items-center">
+        <Link to="/about" className="text-primary-foreground flex flex-col items-center">
           <Info className="h-6 w-6" />
           <span>About</span>
         </Link>
