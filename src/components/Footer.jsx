@@ -1,8 +1,12 @@
 import React from 'react';
-import { Home, User, Settings, Info } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Home, User, Settings, Info } from 'lucide-react';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { useTheme } from 'next-themes';
 
 const Footer = () => {
+  const { theme, setTheme } = useTheme();
+
   return (
     <footer className="bg-purple-600 p-4 fixed bottom-0 left-0 right-0 z-50">
       <div className="flex justify-around">
@@ -14,10 +18,16 @@ const Footer = () => {
           <User className="h-6 w-6" />
           <span>Users</span>
         </Link>
-        <Link to="/settings" className="text-white flex flex-col items-center">
-          <Settings className="h-6 w-6" />
-          <span>Settings</span>
-        </Link>
+        <DropdownMenu>
+          <DropdownMenuTrigger className="text-white flex flex-col items-center">
+            <Settings className="h-6 w-6" />
+            <span>Settings</span>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem onClick={() => setTheme('light')}>Light Theme</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setTheme('dark')}>Dark Theme</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
         <Link to="/about" className="text-white flex flex-col items-center">
           <Info className="h-6 w-6" />
           <span>About</span>
