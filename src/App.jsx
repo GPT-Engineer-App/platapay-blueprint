@@ -19,8 +19,7 @@ import RiderApplication from "./pages/RiderApplication.jsx";
 import EWalletManagement from "./pages/EWalletManagement.jsx";
 import Ordering from "./pages/Ordering.jsx";
 import FundTransfers from "./pages/FundTransfers.jsx";
-
-
+import ReportGeneration from "./pages/ReportGeneration.jsx";
 
 function App() {
   return (
@@ -44,6 +43,7 @@ function App() {
           <Route exact path="/e-wallet-management" element={<EWalletManagement />} />
           <Route exact path="/ordering" element={<Ordering />} />
           <Route exact path="/fund-transfers" element={<FundTransfers />} />
+          <Route exact path="/report-generation" element={<ReportGeneration />} />
         </Routes>
         <Footer />
       </Router>
