@@ -13,6 +13,13 @@ const Chatbot = () => {
     setIsOpen(false);
   };
 
+  const popupwindow = (url, title, w, h) => {
+    var left = (screen.width / 2) - (w / 2);
+    var top = 100;
+    window.open(url, title, 'scrollbars=yes, resizable=yes, toolbar=no, location=no, directories=no, status=no, menubar=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+    return false;
+  };
+
   return (
     <div className="relative">
       <button
@@ -33,14 +40,7 @@ const Chatbot = () => {
             </button>
           </div>
           <div className="p-4">
-            <script dangerouslySetInnerHTML={{__html: `
-              function popupwindow(url, title, w, h) {
-                var left = (screen.width / 2) - (w / 2);
-                var top = 100;
-                window.open(url, title, 'scrollbars=yes, resizable=yes, toolbar=no, location=no, directories=no, status=no, menubar=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
-                return false;
-              }
-            `}} />
+            
             <form onSubmit={(e) => { e.preventDefault(); popupwindow('https://www.botlibre.biz/chat?&id=19175269&embedded=true&chatLog=true&facebookLogin=false&showLink=false&application=3264547834311944444&bubble=true&menubar=true&chooseLanguage=true&sendImage=true&background=%23fff&prompt=You+say&send=&css=https://www.botlibre.biz/css/chatlog.css&language=en', 'child', 700, 550); }}>
               <input style={{ color: '#fff', backgroundColor: '#009900', cursor: 'pointer', font: '13px/30px Arial, Helvetica, sans-serif', height: '40px', border: '0', margin: '10px 10px 0 0', fontWeight: 'bold' }} type="submit" name="chat" value="Chat Now" />
             </form>
