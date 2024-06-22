@@ -11,11 +11,11 @@ const Index = () => {
     { path: '/system-monitoring', icon: <Monitor className="h-6 w-6" />, label: 'System Monitoring' },
     { path: '/reporting', icon: <FileText className="h-6 w-6" />, label: 'Reporting' },
     { path: '/manager-dashboard', icon: <LayoutDashboard className="h-6 w-6" />, label: 'Manager Dashboard' },
-    { path: '/qr-code-payments', icon: <QrCode className="h-6 w-6" />, label: 'QR Code Payments' },
+    { path: 'https://dev.platapay.ph/qrpay/', icon: <QrCode className="h-6 w-6" />, label: 'QR Code Payments' },
     { path: '/cashier-pos', icon: <ShoppingCart className="h-6 w-6" />, label: 'Cashier POS' },
     { path: '/user-account-management', icon: <Wallet className="h-6 w-6" />, label: 'User Account Management' },
     { path: '/rider-application', icon: <Truck className="h-6 w-6" />, label: 'Rider Application' },
-    { path: '/e-wallet-management', icon: <CreditCard className="h-6 w-6" />, label: 'E-Wallet Management' },
+    { path: 'http://18.143.175.220/', icon: <CreditCard className="h-6 w-6" />, label: 'E-Wallet Management' },
     { path: '/ordering', icon: <List className="h-6 w-6" />, label: 'Ordering' },
     { path: '/fund-transfers', icon: <DollarSign className="h-6 w-6" />, label: 'Fund Transfers' },
   ];
