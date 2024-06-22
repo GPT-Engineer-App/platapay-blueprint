@@ -67,11 +67,7 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
   body {
-    @apply bg-background text-foreground;
     padding-top: 4rem; /* Adjust padding to ensure content is not covered by the sticky header */
     padding-bottom: 4rem; /* Adjust padding to ensure content is not covered by the sticky footer */
   }
