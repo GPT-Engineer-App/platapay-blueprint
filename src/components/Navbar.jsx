@@ -23,6 +23,7 @@ const Navbar = ({ pageTitle }) => {
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
           <div className="ml-4">
+            <img src="https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub-500-x-500-px-1.png?w=500" alt="PlataPay Logo" className="h-8 w-8" />
             <div className="text-primary-foreground text-2xl">PlataPay</div>
             <div className="text-primary-foreground text-sm">{pageTitle}</div>
           </div>
