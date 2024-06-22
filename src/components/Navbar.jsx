@@ -18,15 +18,12 @@ const Navbar = ({ pageTitle }) => {
   return (
     <header className="bg-primary p-4 fixed top-0 left-0 right-0 z-50">
       <div className="flex items-center justify-between">
-        <div className="flex items-center">
-          <button onClick={toggleMenu} className="text-primary-foreground focus:outline-none md:hidden">
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-          <div className="ml-4">
-            <img src="https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub-500-x-500-px-1.png?w=500" alt="PlataPay Logo" className="h-8 w-8" />
-            <div className="text-primary-foreground text-2xl">PlataPay</div>
-            <div className="text-primary-foreground text-sm">{pageTitle}</div>
-          </div>
+        <button onClick={toggleMenu} className="text-primary-foreground focus:outline-none md:hidden">
+          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+        <div className="flex items-center justify-center flex-grow">
+          <img src="https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub-500-x-500-px-1.png?w=500" alt="PlataPay Logo" className="h-8 w-8" />
+          <div className="text-primary-foreground text-2xl">PlataPay</div>
         </div>
         <div className="flex items-center space-x-4">
           <DropdownMenu>
@@ -51,22 +48,22 @@ const Navbar = ({ pageTitle }) => {
           </DropdownMenu>
         </div>
       </div>
-      <nav className={`md:flex md:items-center md:justify-between ${isOpen ? 'block' : 'hidden'} md:block`}>
-        <ul className="md:flex md:space-x-4" onClick={closeMenu}>
-          <li><Link to="/" className="text-primary-foreground block py-2 px-4">Home</Link></li>
-          <li><Link to="/user-management" className="text-primary-foreground block py-2 px-4">User Management</Link></li>
-          <li><Link to="/product-management" className="text-primary-foreground block py-2 px-4">Product Management</Link></li>
-          <li><Link to="/integration-management" className="text-primary-foreground block py-2 px-4">Integration Management</Link></li>
-          <li><Link to="/system-monitoring" className="text-primary-foreground block py-2 px-4">System Monitoring</Link></li>
-          <li><Link to="/reporting" className="text-primary-foreground block py-2 px-4">Reporting</Link></li>
-          <li><Link to="/manager-dashboard" className="text-primary-foreground block py-2 px-4">Manager Dashboard</Link></li>
-          <li><Link to="/qr-code-payments" className="text-primary-foreground block py-2 px-4">QR Code Payments</Link></li>
-          <li><Link to="/cashier-pos" className="text-primary-foreground block py-2 px-4">Cashier POS</Link></li>
-          <li><Link to="/user-account-management" className="text-primary-foreground block py-2 px-4">User Account Management</Link></li>
-          <li><Link to="/rider-application" className="text-primary-foreground block py-2 px-4">Rider Application</Link></li>
-          <li><Link to="/e-wallet-management" className="text-primary-foreground block py-2 px-4">E-Wallet Management</Link></li>
-          <li><Link to="/ordering" className="text-primary-foreground block py-2 px-4">Ordering</Link></li>
-          <li><Link to="/fund-transfers" className="text-primary-foreground block py-2 px-4">Fund Transfers</Link></li>
+      <nav className={`md:flex md:items-center md:justify-center ${isOpen ? 'block' : 'hidden'} md:block`}>
+        <ul className="space-y-2 md:space-y-0 md:flex md:space-x-4" onClick={closeMenu}>
+          <li><Link to="/" className="text-primary-foreground block py-2 px-4" onClick={closeMenu}>Home</Link></li>
+          <li><Link to="/user-management" className="text-primary-foreground block py-2 px-4" onClick={closeMenu}>User Management</Link></li>
+          <li><Link to="/product-management" className="text-primary-foreground block py-2 px-4" onClick={closeMenu}>Product Management</Link></li>
+          <li><Link to="/integration-management" className="text-primary-foreground block py-2 px-4" onClick={closeMenu}>Integration Management</Link></li>
+          <li><Link to="/system-monitoring" className="text-primary-foreground block py-2 px-4" onClick={closeMenu}>System Monitoring</Link></li>
+          <li><Link to="/reporting" className="text-primary-foreground block py-2 px-4" onClick={closeMenu}>Reporting</Link></li>
+          <li><Link to="/manager-dashboard" className="text-primary-foreground block py-2 px-4" onClick={closeMenu}>Manager Dashboard</Link></li>
+          <li><Link to="/qr-code-payments" className="text-primary-foreground block py-2 px-4" onClick={closeMenu}>QR Code Payments</Link></li>
+          <li><Link to="/cashier-pos" className="text-primary-foreground block py-2 px-4" onClick={closeMenu}>Cashier POS</Link></li>
+          <li><Link to="/user-account-management" className="text-primary-foreground block py-2 px-4" onClick={closeMenu}>User Account Management</Link></li>
+          <li><Link to="/rider-application" className="text-primary-foreground block py-2 px-4" onClick={closeMenu}>Rider Application</Link></li>
+          <li><Link to="/e-wallet-management" className="text-primary-foreground block py-2 px-4" onClick={closeMenu}>E-Wallet Management</Link></li>
+          <li><Link to="/ordering" className="text-primary-foreground block py-2 px-4" onClick={closeMenu}>Ordering</Link></li>
+          <li><Link to="/fund-transfers" className="text-primary-foreground block py-2 px-4" onClick={closeMenu}>Fund Transfers</Link></li>
         </ul>
       </nav>
     </header>
